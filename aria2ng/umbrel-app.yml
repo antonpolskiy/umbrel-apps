@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: aria2ng
+category: files
+name: Aria2
+version: "1.0.0"
+tagline: Download manager
+description: >-
+  Download manager
+releaseNotes: >-
+  This is initial release
+developer: hurlenko
+website: https://filebrowser.org/
+dependencies: []
+repo: https://github.com/hurlenko/aria2-ariang
+support: https://github.com/filebrowser/filebrowser/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: "/files/"
+deterministicPassword: false
+torOnly: false
+submitter: Umbrel
+submission: https://github.com/getumbrel/umbrel-apps/pull/169
