@@ -1,11 +1,6 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: aria2ng-server-1
-      APP_PORT: 8080
-
   server:
     image: hurlenko/aria2-ariang
     container_name: aria2ng
