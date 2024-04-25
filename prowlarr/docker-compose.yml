@@ -3,12 +3,12 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: prowlarr_server_1
+      APP_HOST: prowlarr-server-1
       APP_PORT: 9696
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: linuxserver/prowlarr:1.12.2@sha256:b22a66d8b99164c0a7b71004e436203f603dff1d2d9482b4f32e6cb18683dc17
+    image: linuxserver/prowlarr:1.17.0.4444@sha256:1.12.2@sha256:0261201360ae7eb7d8feb1751cf3afeb3deb7184
     environment:
       - PUID=1000
       - PGID=1000
@@ -28,11 +28,11 @@ services:
       APP_URL: "http://prowlarr_server_1:9696"
       TRANSMISSION_HOST: "transmission_server_1"
       TRANSMISSION_PORT: 9091
-      RADARR_URL: "http://radarr_server_1:7878"
+      RADARR_URL: "http://radarr-server-1:7878"
       RADARR_CONFIG_XML: "${APP_PROWLARR_RADARR_CONFIG_XML}"
-      LIDARR_URL: "http://lidarr_server_1:8686"
+      LIDARR_URL: "http://lidarr-server-1:8686"
       LIDARR_CONFIG_XML: "${APP_PROWLARR_LIDARR_CONFIG_XML}"
-      SONARR_URL: "http://sonarr_server_1:8989"
+      SONARR_URL: "http://sonarr-server-1:8989"
       SONARR_CONFIG_XML: "${APP_PROWLARR_SONARR_CONFIG_XML}"
       READARR_URL: "http://readarr_server_1:8787"
       READARR_CONFIG_XML: "${APP_PROWLARR_READARR_CONFIG_XML}"
