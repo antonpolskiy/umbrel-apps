@@ -3,12 +3,12 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: sonarr_server_1
+      APP_HOST: sonarr-server-1
       APP_PORT: 8989
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: linuxserver/sonarr:3.0.10@sha256:3f25015afacc1823e59095c8c516a526cf29a92e94ebd0a01b9783259caac6a3
+    image: linuxserver/sonarr:latest
     environment:
       - PUID=1000
       - PGID=1000
@@ -27,6 +27,6 @@ services:
     environment:
       DOWNLOAD_CLIENT_API_URL: "http://sonarr_server_1:8989/api/v3/downloadclient"
       ROOT_FOLDER_API_URL: "http://sonarr_server_1:8989/api/v3/rootfolder"
-      TRANSMISSION_HOST: "transmission_server_1"
+      TRANSMISSION_HOST: "transmission-server-1"
       TRANSMISSION_PORT: 9091
       ROOT_FOLDER: "/downloads/shows"
